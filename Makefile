@@ -13,15 +13,15 @@ init:
 
 lint:
 	@echo "**Running Ruff**"
-	ruff format ./csubatch ./tests
-	ruff check ./csubatch ./tests
+	ruff format ./src ./tests
+	ruff check ./src ./tests
 
 	@echo "**Running Docformatter**"
-	docformatter -r csubatch/
+	docformatter -r src/
 	docformatter -r tests/
 
 	@echo "**Running MyPy**"
-	mypy --strict csubatch/ tests/
+	mypy --strict src/ tests/
 
 clean:
 	@echo "**removing virtual environment**"
